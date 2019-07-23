@@ -1,10 +1,10 @@
 <template>
   <q-page style="padding:15px 9px">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <ContactSearch/>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-9">
           <ContactDashboard/>
         </div>
     </div>

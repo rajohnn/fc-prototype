@@ -1,6 +1,6 @@
 <template>
   <q-card class="my-card">
-    <q-card-section class="bg-primary text-white">
+    <q-card-section class="bg-grey-8 text-white">
       <div class="text-h6">All Contacts</div>
     </q-card-section>
 

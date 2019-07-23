@@ -61,7 +61,7 @@ export default {
 
 <style>
   .card-padding {
-    padding: 10px;
+    margin-left: 7px;
+    margin-top: 7px;
   }
 </style>
-
