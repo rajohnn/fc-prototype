@@ -26,7 +26,10 @@ import {
   QTooltip,
   QScrollArea,
   QBadge,
-  QAvatar
+  QAvatar,
+  QCard,
+  QCardSection,
+  QCardActions
 } from 'quasar'
 
 Vue.use(Quasar, {
@@ -51,7 +54,10 @@ Vue.use(Quasar, {
     QTooltip,
     QScrollArea,
     QBadge,
-    QAvatar
+    QAvatar,
+    QCard,
+    QCardSection,
+    QCardActions
   },
   directives: {
     Ripple

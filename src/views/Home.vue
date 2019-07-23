@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    Content goes here
+    <h4 style="padding:0;margin:0">Dashboard Content</h4>
   </q-page>
 </template>
 

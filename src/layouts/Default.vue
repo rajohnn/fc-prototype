@@ -12,8 +12,8 @@
         />
 
         <q-btn flat no-caps no-wrap class="q-ml-xs" v-if="$q.screen.gt.xs">
-          <q-icon name="laptop" color="grey" size="28px" />
-          <q-toolbar-title shrink class="text-weight-bold">
+          <q-icon name="laptop" color="grey" size="26px" />
+          <q-toolbar-title shrink>
             Freelance Caddy
           </q-toolbar-title>
         </q-btn>
@@ -64,7 +64,7 @@
     >
       <q-scroll-area class="fit">
         <q-list padding>
-          <q-item v-for="link in links1" :key="link.text" v-ripple clickable>
+          <q-item v-for="link in links1" :key="link.text" :to="link.to" v-ripple clickable>
             <q-item-section avatar>
               <q-icon color="grey" :name="link.icon" />
             </q-item-section>
@@ -75,7 +75,7 @@
 
           <q-separator class="q-my-md" />
 
-          <q-item v-for="link in links2" :key="link.text" v-ripple clickable>
+          <q-item v-for="link in links2" :key="link.text" :to="link.to" v-ripple clickable>
             <q-item-section avatar>
               <q-icon color="grey" :name="link.icon" />
             </q-item-section>
@@ -101,17 +101,16 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
-      search: '',
       links1: [
-        { icon: 'home', text: 'Dashboard' },
-        { icon: 'assignment', text: 'Projects' },
-        { icon: 'contacts', text: 'Contacts' }
+        { icon: 'dashboard', text: 'Dashboard', to: '/' },
+        { icon: 'assignment', text: 'Projects', to: 'projects' },
+        { icon: 'contacts', text: 'Contacts', to: 'contacts' }
       ],
       links2: [
-        { icon: 'folder_shared', text: 'Clients' },
-        { icon: 'account_balance', text: 'Billing' },
-        { icon: 'find_in_page', text: 'Find Resource' },
-        { icon: 'bar_chart', text: 'Reports' }
+        { icon: 'folder_shared', text: 'Clients', to: 'clients' },
+        { icon: 'account_balance', text: 'Billing', to: 'billing' },
+        { icon: 'find_in_page', text: 'Find Resource', to: 'resources' },
+        { icon: 'bar_chart', text: 'Reports', to: 'reports' }
       ]
     }
   }
@@ -119,25 +118,25 @@ export default {
 </script>
 
 <style lang="stylus">
-.YL
-  &__toolbar-input-container
-    min-width 100px
-    width 55%
+  .YL
+    &__toolbar-input-container
+      min-width 100px
+      width 55%
 
-  &__toolbar-input-btn
-    border-radius 0
-    border-style solid
-    border-width 1px 1px 1px 0
-    border-color rgba(0,0,0,.24)
-    max-width 60px
-    width 100%
+    &__toolbar-input-btn
+      border-radius 0
+      border-style solid
+      border-width 1px 1px 1px 0
+      border-color rgba(0,0,0,.24)
+      max-width 60px
+      width 100%
 
-  &__drawer-footer-link
-    color inherit
-    text-decoration none
-    font-weight 500
-    font-size .75rem
+    &__drawer-footer-link
+      color inherit
+      text-decoration none
+      font-weight 500
+      font-size .75rem
 
-    &:hover
-      color #000
+      &:hover
+        color #000
 </style>
